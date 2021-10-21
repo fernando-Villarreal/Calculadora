@@ -1,0 +1,29 @@
+.links {
+
+color: rgb(55, 63, 81);
+font-family: cursive;
+padding-right: 10px;
+transform: rotateX(150deg);
+border: 2px solid green;
+border-radius: 10px;
+}
+
+.divrotativo {
+
+    transform: rotateX(150deg);
+
+}
+
+body {
+
+
+background-color: lightblue;
+opacity: 0.9;
+}
+
+#titulo {
+
+    text-align: center;
+    color: red;
+
+}
