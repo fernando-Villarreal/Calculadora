@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculadora</title>
+</head>
+<body>
+
+
+<form action = "">
+num1<input type = "text" id="numero1"><br>
+num2<input type = "text" id="numero2"><br>
+resultado<input readonly type = "text" id="res"><br>
+<input type = "button" value="+" onclick="suma()";>
+<input type = "button" value="-" onclick="resta()";>
+<input type = "button" value="*" onclick="multiplicacion()";>
+<input type = "button" value="/" onclick="division()";>
+<input type = "button" value="√" onclick="Raiz()";>
+<input type = "button" value="%" onclick="porcentaje()";>
+<input type = "reset" value="borrar todo" ;>
+</form>
+
+
+<script type="text/javascript">	
+
+
+
+function suma() {
+	var num1 = parseInt(document.getElementById('numero1').value);
+	var num2 = parseInt(document.getElementById('numero2').value);
+	//var resultado=document.getElementByld("res");
+	var resultado = num1 + num2;
+	// body...
+	// body...
+
+
+   //document.write("el resultado es "+resultado);
+
+   var elemento =  document.getElementById('res');
+
+   elemento.value=resultado;
+
+	//return resultado;
+}
+
+function resta() {
+	var num1 = parseInt(document.getElementById('numero1').value);
+	var num2 = parseInt(document.getElementById('numero2').value);
+	//var resultado=document.getElementByld("res");
+	var resultado = num1 - num2;
+	// body...
+	// body...
+
+
+   //document.write("el resultado es "+resultado);
+
+   var elemento =  document.getElementById('res');
+
+   elemento.value=resultado;
+
+	//return resultado;
+}
+
+function multiplicacion() {
+	var num1 = parseInt(document.getElementById('numero1').value);
+	var num2 = parseInt(document.getElementById('numero2').value);
+	//var resultado=document.getElementByld("res");
+	var resultado = num1 * num2;
+	// body...
+	// body...
+
+
+   //document.write("el resultado es "+resultado);
+
+   var elemento =  document.getElementById('res');
+
+   elemento.value=resultado;
+
+	//return resultado;
+}
+
+function division() {
+	var num1 = parseInt(document.getElementById('numero1').value);
+	var num2 = parseInt(document.getElementById('numero2').value);
+	//var resultado=document.getElementByld("res");
+	var resultado = num1 / num2;
+	// body...
+	// body...
+
+
+   //document.write("el resultado es "+resultado);
+
+   var elemento =  document.getElementById('res');
+
+   elemento.value=resultado;
+
+	//return resultado;
+}
+
+
+
+function Raiz() {
+	var num1 = parseInt(document.getElementById('numero1').value);
+	var num2 = parseInt(document.getElementById('numero2').value);
+	//var resultado=document.getElementByld("res");
+	var resultado = Math.sqrt(num1) || Math.sqrt(num2) ;
+	// body...
+	// body...
+
+
+   //document.write("el resultado es "+resultado);
+
+   var elemento =  document.getElementById('res');
+
+   elemento.value=resultado;
+
+	//return resultado;
+}
+
+function porcentaje() {
+	var num1 = parseInt(document.getElementById('numero1').value);
+	var num2 = parseInt(document.getElementById('numero2').value);
+	//var resultado=document.getElementByld("res");
+	var resultado = num1 * num2 / 100;
+	// body...
+	// body...
+
+
+   //document.write("el resultado es "+resultado);
+
+   var elemento =  document.getElementById('res');
+
+   elemento.value=resultado;
+
+	//return resultado;
+}
+
+
+
+</script>
+
+
+
+	
+</body>
+</html>
+
