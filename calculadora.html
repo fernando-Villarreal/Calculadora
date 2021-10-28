@@ -14,7 +14,8 @@
 num1<input type = "text" id="numero1"><br>
 num2<input type = "text" id="numero2"><br>
 resultado<input readonly type = "text" id="res"><br>
-<input type="button" value="+" onclick="suma()";>
+<input type="button" value="+" onclick="suma()";
+>
 <input type = "button" value="-" onclick="resta()";>
 <input type = "button" value="*" onclick="multiplicacion()";>
 <input type = "button" value="/" onclick="division()";>
@@ -32,7 +33,7 @@ resultado<input readonly type = "text" id="res2"><br>
 <input type = "button" value="sin" onclick="sin()";>
 <input type = "button" value="cos" onclick="cos()";>
 <input type = "button" value="tan" onclick="tan()";>
-<input type = "button" value="!n" onclick="factorial()";>
+<input type = "button" value="n!" onclick="factorial()";>
 <input type = "reset" value="borrar todo" ;>
 </form>
 
@@ -171,7 +172,7 @@ function porcentaje() {
 function sin() {
 	var num1 = parseInt(document.getElementById('snumero1').value);
 	
-	var resultado = Math.sin(num1);
+	var resultado = Math.sin(num1)
 
 
    //document.write("el resultado es "+resultado);
@@ -186,7 +187,7 @@ function sin() {
 function cos() {
 	var num1 = parseInt(document.getElementById('snumero1').value);
 	
-	var resultado = Math.cos(num1);
+	var resultado = Math.cos(num1)/ (180 / Math.PI)
 
 
    //document.write("el resultado es "+resultado);
@@ -202,7 +203,7 @@ function cos() {
 function tan() {
 	var num1 = parseInt(document.getElementById('snumero1').value);
 	
-	var resultado = Math.tan(num1);
+	var resultado = Math.tan(num1) / (180 / Math.PI)
 
 
    //document.write("el resultado es "+resultado);
