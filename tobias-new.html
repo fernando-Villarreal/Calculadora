@@ -20,10 +20,41 @@ resultado<input readonly type = "text" id="res"><br>
 <input type = "button" value="%" onclick="porcentaje()";>
 <input type = "reset" value="borrar todo" ;>
 </form>
+<br>
+<br>
+
+
+<form action = "">
+num1<input type = "text" id="snumero1"><br>
+resultado<input readonly type = "text" id="res2"><br>
+<input type = "button" value="sin" onclick="sin()";>
+<input type = "button" value="cos" onclick="cos()";>
+<input type = "button" value="tan" onclick="tan()";>
+<input type = "button" value="!n" onclick="factorial()";>
+<input type = "reset" value="borrar todo" ;>
+</form>
+
 
 
 <script type="text/javascript">	
 
+
+
+
+
+
+function factorial () {
+
+	var num1 =  parseInt(document.getElementById('snumero1').value);
+	var factor = 1;
+	for (var i=num1 , i>0 , i--){
+	 factor = factor * i;
+	}
+	var elemento =  document.getElementById('res2');
+		 elemento.value=factor;
+	 
+
+}
 
 
 function suma() {
@@ -135,6 +166,53 @@ function porcentaje() {
 
 	//return resultado;
 }
+function sin() {
+	var num1 = parseInt(document.getElementById('snumero1').value);
+	
+	var resultado = Math.sin(num1)
+
+
+   //document.write("el resultado es "+resultado);
+
+   var elemento =  document.getElementById('res2');
+
+   elemento.value=resultado;
+
+	//return resultado;
+}
+
+function cos() {
+	var num1 = parseInt(document.getElementById('snumero1').value);
+	
+	var resultado = Math.cos(num1)
+
+
+   //document.write("el resultado es "+resultado);
+
+   var elemento =  document.getElementById('res2');
+
+   elemento.value=resultado;
+
+	//return resultado;
+}
+
+
+function tan() {
+	var num1 = parseInt(document.getElementById('snumero1').value);
+	
+	var resultado = Math.tan(num1)
+
+
+   //document.write("el resultado es "+resultado);
+
+   var elemento =  document.getElementById('res2');
+
+   elemento.value=resultado;
+
+	//return resultado;
+}
+	
+
 
 
 
@@ -146,3 +224,4 @@ function porcentaje() {
 </body>
 </html>
 
+ 
