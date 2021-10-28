@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<head>}
+<head>
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +9,27 @@
 </head>
 <body>
 
-
 <form action = "">
 num1<input type = "text" id="numero1"><br>
 num2<input type = "text" id="numero2"><br>
 resultado<input readonly type = "text" id="res"><br>
-<input type="button" value="+" onclick="suma()";
->
+<input type="button" value="+" onclick="suma()";>
 <input type = "button" value="-" onclick="resta()";>
 <input type = "button" value="*" onclick="multiplicacion()";>
 <input type = "button" value="/" onclick="division()";>
 <input type = "button" value="√" onclick="Raiz()";>
-<input type = "button" value="%" onclick="porcentaje()";>
 <input type = "reset" value="borrar todo" ;>
 </form>
+
+
 <br>
+<form action = "">
+<input type = "text" id="numero1%">num%<br>
+de num1<input type = "text" id="numero2%"><br>
+resultado<input readonly type = "text" id="res%">
+<input type = "button" value="%" onclick="porcentaje()";>
+</form>
+
 <br>
 
 
@@ -153,8 +159,8 @@ function Raiz() {
 }
 
 function porcentaje() {
-	var num1 = parseInt(document.getElementById('numero1').value);
-	var num2 = parseInt(document.getElementById('numero2').value);
+	var num1 = parseInt(document.getElementById('numero1%').value);
+	var num2 = parseInt(document.getElementById('numero2%').value);
 	//var resultado=document.getElementByld("res");
 	var resultado = num1 * num2 / 100;
 	// body...
@@ -163,7 +169,7 @@ function porcentaje() {
 
    //document.write("el resultado es "+resultado);
 
-   var elemento =  document.getElementById('res');
+   var elemento =  document.getElementById('res%');
 
    elemento.value=resultado;
 
