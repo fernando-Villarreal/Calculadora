@@ -9,6 +9,8 @@
 </head>
 <body>
 
+
+<h2>Funciones basicas</h2>
 <form action = "">
 num1<input type = "text" id="numero1"><br>
 num2<input type = "text" id="numero2"><br>
@@ -17,22 +19,34 @@ resultado<input readonly type = "text" id="res"><br>
 <input type = "button" value="-" onclick="resta()";>
 <input type = "button" value="*" onclick="multiplicacion()";>
 <input type = "button" value="/" onclick="division()";>
-<input type = "button" value="√" onclick="Raiz()";>
 <input type = "reset" value="borrar todo" ;>
 </form>
 
 
-<br>
+<h2>Raiz</h2>
+
+<form action = "">
+num<input type = "text" id="numero1√"><br>
+resultado<input readonly type = "text" id="res√"><br>
+<input type = "button" value="√" onclick="Raiz()";>
+<input type = "reset" value="borrar todo" ;>
+</form>
+	
+
+<h2>Porcentaje</h2>	
+
 <form action = "">
 <input type = "text" id="numero1%">num%<br>
 de num1<input type = "text" id="numero2%"><br>
 resultado<input readonly type = "text" id="res%">
 <input type = "button" value="%" onclick="porcentaje()";>
+<input type = "reset" value="borrar todo" ;>
+
 </form>
 
-<br>
 
 
+<h2>Trigonemetria y factorial</h2>
 <form action = "">
 num1<input type = "text" id="snumero1"><br>
 resultado<input readonly type = "text" id="res2"><br>
@@ -42,7 +56,16 @@ resultado<input readonly type = "text" id="res2"><br>
 <input type = "button" value="n!" onclick="factorial()";>
 <input type = "reset" value="borrar todo" ;>
 </form>
+<h2>Analisis de una funcion lineal</h2>
 
+<form action = "">
+y=<input type = "text" id="pendiente">x+
+<input type = "text" id="ordenada"><br>
+resultado<input readonly type = "text" id="res_analisis">
+<input type = "button" value="analizar" onclick="analizar()";>
+<input type = "reset" value="borrar todo" ;>
+
+</form>
 
 
 
@@ -141,17 +164,17 @@ function division() {
 
 
 function Raiz() {
-	var num1 = parseInt(document.getElementById('numero1').value);
-	var num2 = parseInt(document.getElementById('numero2').value);
+	var num1 = parseInt(document.getElementById('numero1√').value);
+
 	//var resultado=document.getElementByld("res");
-	var resultado = Math.sqrt(num1) || Math.sqrt(num2) ;
+	var resultado = Math.sqrt(num1) ;
 	// body...
 	// body...
 
 
    //document.write("el resultado es "+resultado);
 
-   var elemento =  document.getElementById('res');
+   var elemento =  document.getElementById('res√');
 
    elemento.value=resultado;
 
@@ -177,9 +200,12 @@ function porcentaje() {
 }
 function sin() {
 	var num1 = parseInt(document.getElementById('snumero1').value);
+	var rad =  180/ Math.PI
 	
-	var resultado = Math.sin(num1)
 
+
+	var resultado = Math.sin(num1) * rad
+ 
 
    //document.write("el resultado es "+resultado);
 
@@ -193,7 +219,8 @@ function sin() {
 function cos() {
 	var num1 = parseInt(document.getElementById('snumero1').value);
 	
-	var resultado = Math.cos(num1)/ (180 / Math.PI)
+	var rad =   Math.PI/180
+	var resultado = Math.cos(num1) * rad 
 
 
    //document.write("el resultado es "+resultado);
@@ -208,8 +235,8 @@ function cos() {
 
 function tan() {
 	var num1 = parseInt(document.getElementById('snumero1').value);
-	
-	var resultado = Math.tan(num1) / (180 / Math.PI)
+	var rad =  180/ Math.PI
+	var resultado = Math.tan(num1) * rad
 
 
    //document.write("el resultado es "+resultado);
@@ -219,6 +246,23 @@ function tan() {
    elemento.value=resultado;
 
 	//return resultado;
+}
+
+
+
+function analizar() {
+
+	var num1 = parseInt(document.getElementById('pendiente').value);
+	var num2 = parseInt(document.getElementById('ordenada').value);
+	var resultado = 
+
+
+
+
+   var elemento =  document.getElementById('res_analisis');
+
+   elemento.value=resultado;
+	 
 }
 	
 
